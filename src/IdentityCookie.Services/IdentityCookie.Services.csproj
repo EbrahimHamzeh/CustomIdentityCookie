@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\IdentityCookie.DomainClasses\IdentityCookie.DomainClasses.csproj" />
+    <ProjectReference Include="..\IdentityCookie.Common\IdentityCookie.Common.csproj" />
+    <ProjectReference Include="..\IdentityCookie.DataLayer\IdentityCookie.DataLayer.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

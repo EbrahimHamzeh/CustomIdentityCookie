@@ -1,0 +1,15 @@
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\bin\Debug\netstandard2.0\IdentityCookie.Services.deps.json
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\bin\Debug\netstandard2.0\IdentityCookie.Services.dll
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\bin\Debug\netstandard2.0\IdentityCookie.Services.pdb
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\bin\Debug\netstandard2.0\IdentityCookie.Common.dll
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\bin\Debug\netstandard2.0\IdentityCookie.DataLayer.dll
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\bin\Debug\netstandard2.0\IdentityCookie.DomainClasses.dll
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\bin\Debug\netstandard2.0\IdentityCookie.DomainClasses.pdb
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\bin\Debug\netstandard2.0\IdentityCookie.Common.pdb
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\bin\Debug\netstandard2.0\IdentityCookie.DataLayer.pdb
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\obj\Debug\netstandard2.0\IdentityCookie.Services.csprojAssemblyReference.cache
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\obj\Debug\netstandard2.0\IdentityCookie.Services.AssemblyInfoInputs.cache
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\obj\Debug\netstandard2.0\IdentityCookie.Services.AssemblyInfo.cs
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\obj\Debug\netstandard2.0\IdentityCookie.Services.csproj.CopyComplete
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\obj\Debug\netstandard2.0\IdentityCookie.Services.dll
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.Services\obj\Debug\netstandard2.0\IdentityCookie.Services.pdb
