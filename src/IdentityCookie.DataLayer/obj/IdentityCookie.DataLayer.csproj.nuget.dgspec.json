@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj": {}
+    "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj": {
+    "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj",
+        "projectUniqueName": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj",
         "projectName": "IdentityCookie.DataLayer",
-        "projectPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj",
+        "projectPath": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj",
         "packagesPath": "C:\\Users\\Ebrahim\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\obj\\",
+        "outputPath": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -42,6 +42,22 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "(, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
