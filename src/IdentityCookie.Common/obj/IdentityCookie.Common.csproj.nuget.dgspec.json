@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj": {}
+    "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj": {
+    "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj",
+        "projectUniqueName": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj",
         "projectName": "IdentityCookie.Common",
-        "projectPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj",
+        "projectPath": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj",
         "packagesPath": "C:\\Users\\Ebrahim\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\obj\\",
+        "outputPath": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -42,6 +42,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -53,6 +59,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj": {}
+    "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj": {
+    "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj",
+        "projectUniqueName": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj",
         "projectName": "IdentityCookie.DomainClasses",
-        "projectPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj",
+        "projectPath": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj",
         "packagesPath": "C:\\Users\\Ebrahim\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\obj\\",
+        "outputPath": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -42,6 +42,16 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "(, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

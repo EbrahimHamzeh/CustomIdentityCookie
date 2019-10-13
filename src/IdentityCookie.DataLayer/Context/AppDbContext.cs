@@ -1,31 +1,73 @@
-using System;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+using System.Threading;
+using System;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore.Storage;
+using IdentityCookie.DomainClasses;
+using IdentityCookie.DomainClasses.IAuditableEntity;
+using IdentityCookie.Common;
 
 namespace IdentityCookie.DataLayer.Context
 {
     public class AppDbContext : DbContext, IUnitOfWork
     {
+        private IDbContextTransaction _transaction;
+        
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public new void AddRange<TEntity>(IEnumerable<TEntity> entities) where TEntity : class
+        public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<UserRole> UserRoles { get; set; }
+
+        public void AddRange<TEntity>(IEnumerable<TEntity> entities) where TEntity : class
         {
             Set<TEntity>().AddRange(entities);
         }
 
-        public void ExecuteSqlCommand(string query)
+        public void BeginTransaction()
         {
-            Database.ExecuteSqlCommand(query);
+            _transaction = Database.BeginTransaction();
         }
 
-        public void ExecuteSqlCommand(string query, params object[] parameters)
+        public void RollbackTransaction()
         {
-            Database.ExecuteSqlCommand(query, parameters);
+            if (_transaction == null)
+            {
+                throw new NullReferenceException("Please call `BeginTransaction()` method first.");
+            }
+            _transaction.Rollback();
+        }
+
+        public void CommitTransaction()
+        {
+            if (_transaction == null)
+            {
+                throw new NullReferenceException("Please call `BeginTransaction()` method first.");
+            }
+            _transaction.Commit();
+        }
+
+        public override void Dispose()
+        {
+            _transaction?.Dispose();
+            base.Dispose();
+        }
+
+        public void ExecuteSqlInterpolatedCommand(FormattableString query)
+        {
+            Database.ExecuteSqlInterpolated(query);
+        }
+
+        public void ExecuteSqlRawCommand(string query, params object[] parameters)
+        {
+            Database.ExecuteSqlRaw(query, parameters);
         }
 
         public T GetShadowPropertyValue<T>(object entity, string propertyName) where T : IConvertible
@@ -33,7 +75,7 @@ namespace IdentityCookie.DataLayer.Context
             var value = this.Entry(entity).Property(propertyName).CurrentValue;
             return value != null
                 ? (T)Convert.ChangeType(value, typeof(T), CultureInfo.InvariantCulture)
-                : default(T);
+                : default;
         }
 
         public object GetShadowPropertyValue(object entity, string propertyName)
@@ -46,7 +88,7 @@ namespace IdentityCookie.DataLayer.Context
             Update(entity);
         }
 
-        public new void RemoveRange<TEntity>(IEnumerable<TEntity> entities) where TEntity : class
+        public void RemoveRange<TEntity>(IEnumerable<TEntity> entities) where TEntity : class
         {
             Set<TEntity>().RemoveRange(entities);
         }
@@ -103,14 +145,12 @@ namespace IdentityCookie.DataLayer.Context
         {
             validateEntities();
             setShadowProperties();
-            this.ApplyCorrectYeKe();
         }
 
         private void setShadowProperties()
         {
             // we can't use constructor injection anymore, because we are using the `AddDbContextPool<>`
             var httpContextAccessor = this.GetService<IHttpContextAccessor>();
-            httpContextAccessor.CheckArgumentIsNull(nameof(httpContextAccessor));
             ChangeTracker.SetAuditableEntityPropertyValues(httpContextAccessor);
         }
 
@@ -121,18 +161,21 @@ namespace IdentityCookie.DataLayer.Context
             {
                 // we can't use constructor injection anymore, because we are using the `AddDbContextPool<>`
                 var loggerFactory = this.GetService<ILoggerFactory>();
-                loggerFactory.CheckArgumentIsNull(nameof(loggerFactory));
                 var logger = loggerFactory.CreateLogger<AppDbContext>();
                 logger.LogError(errors);
                 throw new InvalidOperationException(errors);
             }
         }
 
-        protected override void OnModelCreating(ModelBuilder builder){
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            // it should be placed here, otherwise it will rewrite the following settings!
             base.OnModelCreating(builder);
 
+            // This should be placed here, at the end.
             builder.AddAuditableShadowProperties();
         }
+
     }
     
 }
