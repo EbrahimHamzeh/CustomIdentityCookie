@@ -1,6 +1,4 @@
-using System;
-
-namespace IdentityCookie.DomainClasses.IAuditableEntity
+namespace IdentityCookie.DomainClasses.AuditableEntity
 {
     public interface IAuditableEntity
     {

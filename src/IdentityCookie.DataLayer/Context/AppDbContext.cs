@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 using IdentityCookie.DomainClasses;
-using IdentityCookie.DomainClasses.IAuditableEntity;
+using IdentityCookie.DomainClasses.AuditableEntity;
 using IdentityCookie.Common;
 
 namespace IdentityCookie.DataLayer.Context
@@ -25,6 +25,7 @@ namespace IdentityCookie.DataLayer.Context
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<UserRole> UserRoles { get; set; }
+        public virtual DbSet<AppLogItem> AppLogItems { get; set; }
 
         public void AddRange<TEntity>(IEnumerable<TEntity> entities) where TEntity : class
         {

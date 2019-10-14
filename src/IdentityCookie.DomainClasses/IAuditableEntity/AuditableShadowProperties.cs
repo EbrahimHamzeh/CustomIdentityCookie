@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace IdentityCookie.DomainClasses.IAuditableEntity
+namespace IdentityCookie.DomainClasses.AuditableEntity
 {
     public static class AuditableShadowProperties
     {

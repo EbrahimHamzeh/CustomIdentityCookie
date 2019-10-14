@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using IdentityCookie.DomainClasses.AuditableEntity;
 
 namespace IdentityCookie.DomainClasses
 {
-    public class User : BaseEntity
+    public class User : BaseEntity, IAuditableEntity
     {
         public string Username { get; set; }
         public string Password { get; set; }

@@ -42,6 +42,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -53,6 +59,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -89,6 +98,9 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
+              "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj": {
+                "projectPath": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj"
+              },
               "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj": {
                 "projectPath": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj"
               }
@@ -104,13 +116,15 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[3.0.0, )"
             },
@@ -119,8 +133,6 @@
               "version": "[3.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[3.0.0, )"
             },
@@ -198,6 +210,16 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -265,6 +287,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "(, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
