@@ -1,17 +1,83 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj": {}
+    "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj": {
+    "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj",
-        "projectName": "IdentityCookie.DataLayer",
-        "projectPath": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj",
+        "projectName": "IdentityCookie.Common",
+        "projectPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj",
         "packagesPath": "C:\\Users\\Ebrahim\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\obj\\",
+        "outputPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ebrahim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj",
+        "projectName": "IdentityCookie.DataLayer",
+        "projectPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\IdentityCookie.DataLayer.csproj",
+        "packagesPath": "C:\\Users\\Ebrahim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -32,8 +98,11 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj": {
-                "projectPath": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj"
+              "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj": {
+                "projectPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.Common\\IdentityCookie.Common.csproj"
+              },
+              "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj": {
+                "projectPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj"
               }
             }
           }
@@ -49,7 +118,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
-              "version": "(, )"
+              "version": "[2.2.2, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -103,14 +172,14 @@
         }
       }
     },
-    "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj": {
+    "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj",
+        "projectUniqueName": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj",
         "projectName": "IdentityCookie.DomainClasses",
-        "projectPath": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj",
+        "projectPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\IdentityCookie.DomainClasses.csproj",
         "packagesPath": "C:\\Users\\Ebrahim\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\obj\\",
+        "outputPath": "C:\\Users\\Ebrahim\\Desktop\\IdentityCookie\\src\\IdentityCookie.DomainClasses\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -141,6 +210,16 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

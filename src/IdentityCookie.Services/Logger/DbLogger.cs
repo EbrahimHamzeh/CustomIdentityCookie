@@ -1,6 +1,9 @@
 using System;
 using System.Text.Json;
+using IdentityCookie.DomainClasses;
+using IdentityCookie.ViewModels.Settings;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 

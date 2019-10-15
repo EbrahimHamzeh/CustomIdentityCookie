@@ -1,7 +1,0 @@
-C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.DomainClasses\bin\Debug\netcoreapp3.0\IdentityCookie.DomainClasses.deps.json
-C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.DomainClasses\bin\Debug\netcoreapp3.0\IdentityCookie.DomainClasses.dll
-C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.DomainClasses\bin\Debug\netcoreapp3.0\IdentityCookie.DomainClasses.pdb
-C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.DomainClasses\obj\Debug\netcoreapp3.0\IdentityCookie.DomainClasses.AssemblyInfoInputs.cache
-C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.DomainClasses\obj\Debug\netcoreapp3.0\IdentityCookie.DomainClasses.AssemblyInfo.cs
-C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.DomainClasses\obj\Debug\netcoreapp3.0\IdentityCookie.DomainClasses.dll
-C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.DomainClasses\obj\Debug\netcoreapp3.0\IdentityCookie.DomainClasses.pdb

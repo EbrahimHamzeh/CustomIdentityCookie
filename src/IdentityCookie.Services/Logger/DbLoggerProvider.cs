@@ -5,8 +5,11 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using IdentityCookie.DataLayer.Context;
+using IdentityCookie.DomainClasses;
+using IdentityCookie.ViewModels.Settings;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 
 namespace IdentityCookie.Services.Logger
 {

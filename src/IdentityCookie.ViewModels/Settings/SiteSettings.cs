@@ -1,4 +1,5 @@
 using System;
+using DNTCommon.Web.Core;
 
 namespace IdentityCookie.ViewModels.Settings
 {
@@ -8,12 +9,6 @@ namespace IdentityCookie.ViewModels.Settings
         public Logging Logging { get; set; }
         public SmtpConfig Smtp { get; set; }
         public ConnectionStrings ConnectionStrings { get; set; }
-        public bool EnableEmailConfirmation { get; set; }
-        public TimeSpan EmailConfirmationTokenProviderLifespan { get; set; }
-        public int NotAllowedPreviouslyUsedPasswords { get; set; }
-        public int ChangePasswordReminderDays { get; set; }
         public string ContentSecurityPolicyErrorLogUri { get; set; }
-        public string[] EmailsBanList { get; set; }
-        public string[] PasswordsBanList { get; set; }
     }
 }

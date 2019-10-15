@@ -4,6 +4,7 @@
     <ProjectReference Include="..\IdentityCookie.DomainClasses\IdentityCookie.DomainClasses.csproj" />
     <ProjectReference Include="..\IdentityCookie.Common\IdentityCookie.Common.csproj" />
     <ProjectReference Include="..\IdentityCookie.DataLayer\IdentityCookie.DataLayer.csproj" />
+    <ProjectReference Include="..\IdentityCookie.ViewModels\IdentityCookie.ViewModels.csproj" />
   </ItemGroup>
 
   <ItemGroup>
