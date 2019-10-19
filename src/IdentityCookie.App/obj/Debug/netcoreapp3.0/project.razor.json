@@ -14354,6 +14354,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Area\\Admin\\Views\\Login\\Index.cshtml",
+      "TargetPath": "Area\\Admin\\Views\\Login\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\NotFound.cshtml",
       "TargetPath": "Views\\Shared\\NotFound.cshtml",
       "FileKind": "mvc"
@@ -14364,8 +14369,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Area\\Admin\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Area\\Admin\\Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Area\\Admin\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Area\\Admin\\Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14379,8 +14394,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Shared\\_LayoutIdentity.cshtml",
+      "TargetPath": "Views\\Shared\\_LayoutIdentity.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Shared\\AccessDenied.cshtml",
       "TargetPath": "Views\\Shared\\AccessDenied.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Area\\Admin\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Area\\Admin\\Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {

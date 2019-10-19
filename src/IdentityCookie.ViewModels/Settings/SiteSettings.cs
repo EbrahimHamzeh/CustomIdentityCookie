@@ -10,5 +10,6 @@ namespace IdentityCookie.ViewModels.Settings
         public SmtpConfig Smtp { get; set; }
         public ConnectionStrings ConnectionStrings { get; set; }
         public string ContentSecurityPolicyErrorLogUri { get; set; }
+        public int LoginCookieExpirationDays { get; set; }
     }
 }

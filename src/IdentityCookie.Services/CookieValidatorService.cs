@@ -40,7 +40,7 @@ namespace IdentityCookie.Services
             }
 
             var userIdString = claimsIdentity.FindFirst(ClaimTypes.UserData).Value;
-            if (!int.TryParse(userIdString, out int userId))
+            if (!Guid.TryParse(userIdString, out Guid userId))
             {
                 // this is not our issued cookie
                 await handleUnauthorizedRequest(context);

@@ -40,7 +40,7 @@ namespace IdentityCookie.App
         {
             if (env.IsDevelopment())
             {
-                app.UseDatabaseErrorPage();
+                // app.UseDatabaseErrorPage();
                 app.UseDeveloperExceptionPage();
             }
             else

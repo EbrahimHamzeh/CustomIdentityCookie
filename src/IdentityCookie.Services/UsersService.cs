@@ -9,10 +9,10 @@ namespace IdentityCookie.Services
 {
     public interface IUsersService
     {
-        Task<string> GetSerialNumberAsync(int userId);
+        Task<string> GetSerialNumberAsync(Guid userId);
         Task<User> FindUserAsync(string username, string password);
-        Task<User> FindUserAsync(int userId);
-        Task UpdateUserLastActivityDateAsync(int userId);
+        Task<User> FindUserAsync(Guid userId);
+        Task UpdateUserLastActivityDateAsync(Guid userId);
     }
     public class UsersService : IUsersService
     {
@@ -27,7 +27,7 @@ namespace IdentityCookie.Services
             _securityService = securityService;
         }
 
-        public async Task<User> FindUserAsync(int userId)
+        public async Task<User> FindUserAsync(Guid userId)
         {
             return await _users.FindAsync(userId);
         }
@@ -38,13 +38,13 @@ namespace IdentityCookie.Services
             return await _users.FirstOrDefaultAsync(x => x.Username == username && x.Password == passwordHash);
         }
 
-        public async Task<string> GetSerialNumberAsync(int userId)
+        public async Task<string> GetSerialNumberAsync(Guid userId)
         {
             var user = await FindUserAsync(userId).ConfigureAwait(false);
             return user.SerialNumber;
         }
 
-        public async Task UpdateUserLastActivityDateAsync(int userId)
+        public async Task UpdateUserLastActivityDateAsync(Guid userId)
         {
             var user = await FindUserAsync(userId).ConfigureAwait(false);
             if (user.LastLoggedIn != null)

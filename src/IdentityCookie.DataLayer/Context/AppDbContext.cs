@@ -85,7 +85,8 @@ namespace IdentityCookie.DataLayer.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.EnableSensitiveDataLogging(); // Beter log exception
+            base.OnConfiguring(optionsBuilder);
+            // optionsBuilder.EnableSensitiveDataLogging(); // Beter log exception
         }
 
         #region Defult Function
