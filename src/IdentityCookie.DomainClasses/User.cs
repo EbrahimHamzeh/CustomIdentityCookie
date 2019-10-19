@@ -6,6 +6,11 @@ namespace IdentityCookie.DomainClasses
 {
     public class User : BaseEntity, IAuditableEntity
     {
+        public User()
+        {
+            UserRoles = new HashSet<UserRole>();
+        }
+
         public string Username { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }

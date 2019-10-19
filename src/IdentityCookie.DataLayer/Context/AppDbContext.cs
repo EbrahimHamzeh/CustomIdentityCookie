@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
@@ -19,14 +18,77 @@ namespace IdentityCookie.DataLayer.Context
     public class AppDbContext : DbContext, IUnitOfWork
     {
         private IDbContextTransaction _transaction;
-        
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+        private readonly ISecurityService _securityService;
 
-        public virtual DbSet<User> User { get; set; }
+        public AppDbContext(DbContextOptions<AppDbContext> options, ISecurityService securityService)
+         : base(options)
+        {
+            _securityService = securityService;
+        }
+
+        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<UserRole> UserRoles { get; set; }
         public virtual DbSet<AppLogItem> AppLogItems { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            // it should be placed here, otherwise it will rewrite the following settings!
+            base.OnModelCreating(builder);
+
+            builder.Entity<User>(entityAction =>
+            {
+                entityAction.Property(e => e.Username).HasMaxLength(450).IsRequired();
+                entityAction.HasIndex(e => e.Username).IsUnique();
+                entityAction.Property(e => e.Password).IsRequired();
+                entityAction.Property(e => e.SerialNumber).HasMaxLength(450);
+            });
+
+            builder.Entity<Role>(entityAction =>
+            {
+                // entityAction.Property(e => e.Name).IsRequired().IsUnicode();
+                // entityAction.HasIndex(e => e.Name).IsUnique();
+            });
+
+            builder.Entity<UserRole>(entityAction =>
+            {
+                entityAction.HasKey(e => new { e.UserId, e.RoleId });
+                entityAction.HasIndex(e => e.UserId);
+                entityAction.HasIndex(e => e.RoleId);
+
+                entityAction.HasOne(x => x.User).WithMany(x => x.UserRoles).HasForeignKey(x => x.UserId);
+                entityAction.HasOne(x => x.Role).WithMany(x => x.UserRoles).HasForeignKey(x => x.RoleId);
+            });
+
+            // TODO: نتونستم ذخیره کنم برای همین seed جدا مینوسم.
+            // var adminRole = new Role { Id = Guid.Parse("c5d28c9e-7d13-4fd3-bb47-8cab0dca9ade"), Name = "Admin" };
+            // var user = new User
+            // {
+            //     Id = Guid.Parse("0b5f8384-40c0-499f-b16f-34361b08c460"),
+            //     Username = "admin",
+            //     DisplayName = "ابراهیم حمزه",
+            //     IsActive = true,
+            //     LastLoggedIn = null,
+            //     Password = _securityService.GetSha256Hash("123"),
+            //     SerialNumber = Guid.NewGuid().ToString("N"),
+            // };
+
+            // builder.Entity<Role>().HasData(adminRole);
+
+            // builder.Entity<User>().HasData(user);
+
+            // builder.Entity<UserRole>().HasData(new UserRole { RoleId = adminRole.Id, Role = adminRole, UserId = user.Id, User = user });
+
+            // This should be placed here, at the end.
+            builder.AddAuditableShadowProperties();
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.EnableSensitiveDataLogging(); // Beter log exception
+        }
+
+        #region Defult Function
         public void AddRange<TEntity>(IEnumerable<TEntity> entities) where TEntity : class
         {
             Set<TEntity>().AddRange(entities);
@@ -167,16 +229,7 @@ namespace IdentityCookie.DataLayer.Context
                 throw new InvalidOperationException(errors);
             }
         }
-
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            // it should be placed here, otherwise it will rewrite the following settings!
-            base.OnModelCreating(builder);
-
-            // This should be placed here, at the end.
-            builder.AddAuditableShadowProperties();
-        }
-
+        #endregion
     }
-    
+
 }
