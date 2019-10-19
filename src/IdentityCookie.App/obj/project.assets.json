@@ -8000,7 +8000,7 @@
       "IdentityCookie.DomainClasses >= 1.0.0",
       "IdentityCookie.Services >= 1.0.0",
       "IdentityCookie.ViewModels >= 1.0.0",
-      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 3.0.0"
@@ -8068,7 +8068,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
-            "version": "(, )"
+            "version": "[3.0.0, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
