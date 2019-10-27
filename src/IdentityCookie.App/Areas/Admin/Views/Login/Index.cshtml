@@ -1,8 +1,9 @@
 @{
     Layout = "~/Views/Shared/_LayoutIdentity.cshtml";
 }
+@model LoginViewModel
 <!-- Login card -->
-<form class="login-form" action="index.html">
+<form class="login-form" method="POST" asp-area="Admin" asp-controller="Login" asp-action="Index">
     <div class="card mb-0">
         <div class="card-body">
             <div class="text-center mb-3">
@@ -12,14 +13,14 @@
             </div>
 
             <div class="form-group form-group-feedback form-group-feedback-left">
-                <input type="text" class="form-control" placeholder="نام کاربری">
+                <input asp-for="Username" type="text" class="form-control" placeholder="نام کاربری">
                 <div class="form-control-feedback">
                     <i class="icon-user text-muted"></i>
                 </div>
             </div>
 
             <div class="form-group form-group-feedback form-group-feedback-left">
-                <input type="password" class="form-control" placeholder="رمز عبور">
+                <input asp-for="Password" type="password" class="form-control" placeholder="رمز عبور">
                 <div class="form-control-feedback">
                     <i class="icon-lock2 text-muted"></i>
                 </div>
@@ -28,7 +29,7 @@
             <div class="form-group d-flex align-items-center">
                 <div class="form-check mb-0">
                     <label class="form-check-label">
-                        <input type="checkbox" name="remember" class="form-input-styled" checked data-fouc>
+                        <input type="checkbox" asp-for="RememberMe" class="form-input-styled" checked data-fouc>
                         مرابه‌خاطربسپار
                     </label>
                 </div>

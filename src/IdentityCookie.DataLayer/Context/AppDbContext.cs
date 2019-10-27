@@ -83,11 +83,11 @@ namespace IdentityCookie.DataLayer.Context
             builder.AddAuditableShadowProperties();
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            base.OnConfiguring(optionsBuilder);
-            // optionsBuilder.EnableSensitiveDataLogging(); // Beter log exception
-        }
+        // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        // {
+        //     base.OnConfiguring(optionsBuilder);
+        //     // optionsBuilder.EnableSensitiveDataLogging(); // Beter log exception
+        // }
 
         #region Defult Function
         public void AddRange<TEntity>(IEnumerable<TEntity> entities) where TEntity : class

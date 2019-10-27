@@ -79,3 +79,9 @@ C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.App\obj\Debug\netcore
 C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.App\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.App\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.App\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.App\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.App\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_LayoutAdmin.cshtml.g.cs
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.App\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_MainNavbar.cshtml.g.cs
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.App\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_FooterMenu.cshtml.g.cs
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.App\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_HeaderContent.cshtml.g.cs
+C:\Users\Ebrahim\Desktop\IdentityCookie\src\IdentityCookie.App\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_MainMenu.cshtml.g.cs

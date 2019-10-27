@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>مدیریت پروژه - @(ViewData["Title"] ?? "")</title>
+
+	<!-- Global stylesheets -->
+	<link href="/assets/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets//loaders/blockui.min.js"></script>
+	<script src="/assets/ui/slinky.min.js"></script>
+	<script src="/assets/ui/fab.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="/assets/visualization/d3/d3.min.js"></script>
+	<script src="/assets/visualization/d3/d3_tooltip.js"></script>
+	<script src="/assets/forms/styling/switchery.min.js"></script>
+	<script src="/assets/forms/selects/bootstrap_multiselect.js"></script>
+	<script src="/assets/ui/moment/moment.min.js"></script>
+	<script src="/assets/pickers/daterangepicker.js"></script>
+
+	<script src="/assets/js/app.js"></script>
+	<script src="/assets/dashboard.js"></script>
+	<!-- /theme JS files -->
+
+</head>
+
+<body>
+	<!-- Page header -->
+	<div class="page-header page-header-dark">
+
+		<!-- Main navbar -->
+			<partial name="_MainNavbar" />
+		<!-- /main navbar -->
+
+
+		<!-- Page header content -->
+			<partial name="_HeaderContent" />
+		<!-- /page header content -->
+
+
+		<!-- Main Menu-->
+			<partial name="_MainMenu" />
+		<!-- /Main Menu -->
+
+	</div>
+	<!-- /page header -->
+		
+
+	<!-- Page content -->
+	<div class="page-content">
+		<!-- Main content -->
+		<div class="content-wrapper">
+			<!-- Content area -->
+			<div class="content">
+				@RenderBody()
+			</div>
+			<!-- /content area -->
+		</div>
+		<!-- /main content -->
+	</div>
+	<!-- /page content -->
+
+	<!-- Footer -->
+		<partial name="_FooterMenu" />
+	<!-- /footer -->
+		
+</body>
+</html>
