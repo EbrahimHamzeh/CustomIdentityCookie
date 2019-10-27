@@ -5,11 +5,11 @@ using Microsoft.AspNetCore.Authorization;
 namespace IdentityCookie.App.Area.Admin.Controllers
 {
     [Area(AreaConstants.Admin)]
-    public class DashboardController : Controller
+    public class TaskController : Controller
     {
-        private readonly ILogger<DashboardController> _logger;
+        private readonly ILogger<TaskController> _logger;
 
-        public DashboardController(ILogger<DashboardController> logger)
+        public TaskController(ILogger<TaskController> logger)
         {
             _logger = logger;
         }

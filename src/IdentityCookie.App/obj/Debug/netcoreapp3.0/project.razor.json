@@ -14364,6 +14364,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Areas\\Admin\\Views\\LetterCard copy\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\LetterCard copy\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
@@ -14376,6 +14381,11 @@
     {
       "FilePath": "Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Areas\\Admin\\Views\\LetterCard\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\LetterCard\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
